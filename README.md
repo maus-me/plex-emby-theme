@@ -11,6 +11,7 @@ Improvements upon the one created by fillidill.
 * Revamped the sidebar.  Much more responsive and usable.
 * Removed the Play Icon on item hover.
 * Gave icons hover effects.
+* Replaced default "Plex" color with a new modern "Mint" color.
 
 
 
@@ -18,7 +19,7 @@ Improvements upon the one created by fillidill.
 * Mobile browser streaming causes videos to use "background: cover" instead of "background: fill"
 * Borders on hover does not respect the "blow-up" effect causing 1-2px image bleed through border.
 * Text colors in Settings not set.  If user is set to "light" themes may cause black text on settings.
-* Replaced default "Plex" color with a new modern "Mint" color.
+
 
 
 ## Tested on:
