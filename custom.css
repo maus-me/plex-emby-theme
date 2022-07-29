@@ -14,13 +14,13 @@ div.mediaInfo.mediaInfoPrimary.detail-mediaInfoPrimary.flex.align-items-center.f
 	color:transparent;
 }
 
-.videoPlayerContainer:not([style]) > video {
+/* .videoPlayerContainer:is([style]) > video {
     margin: 0 !important;
     padding: 0 !important;
     object-fit: cover; 
     width: 100%;
     height: 100%;
-}
+} */
 .cardPadder-square>.cardImage {
 
     object-fit: cover !important;
@@ -45,11 +45,15 @@ div.mediaInfo.mediaInfoPrimary.detail-mediaInfoPrimary.flex.align-items-center.f
 
 /* Increase My Media image size */
 div.card.smallBackdropCard {
-/* width: 16.66% !important; 
-min-width: 200px !important; */
+width: 16.66% !important; 
+min-width: 200px !important;
 }
 /* Remove Play indicator button */
-.cardOverlayFab-primary {display: none !important;}
+.cardOverlayFab-primary:hover {
+ #display: none !important;
+ #opacity: 95% !important;
+
+}
 
 textarea#txtCustomCss {
   min-height: 2000px;
@@ -128,12 +132,13 @@ skinHeader .headerLeft, skinHeader .headerRight {
   z-index: 1;
 }
 .emby-input, .emby-textarea, .emby-select, span.checkboxLabel-lockedfield.checkboxLabel-lockedfield-embeddedintofield.checkboxLabel, span.checkboxLabel-lockedfield.checkboxLabel-lockedfield-standalone.checkboxLabel {
-  background: rgb(0 0 0 / 30%) !important;
+  background: rgb(15 15 15 / 30%) !important;
 }
 .emby-checkbox:checked + .checkboxLabel:before {
   border-color: var(--theme-primary-color) !important;
   background-color: var(--theme-primary-color) !important;
 }
+
 .emby-select-backdropfilter.detailTrackSelect, .fab-backdropfilter, .raised-backdropfilter, .videoosd-bottom-with-opentab .videoosd-tab-button {
   background: rgb(15 15 15 / 60%) !important;
   -webkit-backdrop-filter: saturate(1) blur(1.5em) !important;
@@ -173,7 +178,7 @@ input.searchfields-txtSearch {
 }
 .searchSuggestionsList a {
   padding: 5px;
-  background: #ffffff0d;
+  background: rgb(0 0 0 / 25%) !important;
   border-radius: 30px;
   margin: 5px;
   color: rgb(255 255 255 / 50%);
@@ -230,7 +235,7 @@ div.emby-scroller .filter-active {
   color: #f6f6f7;
 }
 .listItem.navMenuOption-selected, .paper-icon-button-light:focus {
-  background-color: rgb(255 255 255 / 5%) !important;
+  background-color: rgb(0 0 0 / 15%) !important;
 }
 i.navDrawerListItemIcon.listItemIcon.md-icon {
   color: #ddd;
@@ -262,7 +267,7 @@ a:not(.emby-button), .cardText.cardTextCentered.cardText-first > button {
   backdrop-filter: saturate(1) blur(1.5em) !important;
 }
 .resumeInfoDetail .itemProgressBar {
-  background: rgb(255 255 255 / 20%) !important;
+  background: rgb(0 0 0 / 20%) !important;
 }
 .itemProgressBarForeground {
   background-color: var(--theme-primary-color) !important;
@@ -276,7 +281,7 @@ a:not(.emby-button), .cardText.cardTextCentered.cardText-first > button {
   font-size: 12px;
 }
 .headerMiddle.sectionTabs.headerMiddle-withSectionTabs .emby-tab-button-active {
-  background: rgb(255 255 255 / 10%) !important;
+  background: rgb(0 0 0 / 10%) !important;
 }
 @media (min-width: 80em) {
 	.headerMiddle.sectionTabs.headerMiddle-withSectionTabs {
@@ -573,7 +578,7 @@ button.emby-scrollbuttons-scrollbutton.md-icon.paper-icon-button-light {
     width: 100% !important;
     border-radius: 10px !important;
     -webkit-backdrop-filter: saturate(1.5) blur(4em) !important;
-    backdrop-filter: saturate(1.5) blur(2em) !important;
+    backdrop-filter: sat
     box-sizing: border-box;
     padding: 0.5em 0.7em;
     font-weight: normal !important;
@@ -669,15 +674,15 @@ button.emby-scrollbuttons-scrollbutton.md-icon.paper-icon-button-light {
   background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, .8)) !important;
 }
 .videoosd-guidetab .programCellInner {
-  background: rgb(255 255 255 / 20%) !important;
+  background: rgb(0 0 0 / 20%) !important;
 }
 .videoosd-tab .cardBox .cardImage {
   background: rgb(51 51 51 / 50%);
 }
 .videoosd-tabcontainers .videoosd-tab .cardOverlayContainer {
-  -webkit-box-shadow: 0px 0px 45px 5px rgb(255 255 255 / 15%);
-  -moz-box-shadow: 0px 0px 45px 5px rgba(255, 255, 255, 0.15);
-  box-shadow: 0px 0px 45px 5px rgb(255 255 255 / 15%);
+  -webkit-box-shadow: 0px 0px 45px 5px rgb(0 0 0 / 15%);
+  -moz-box-shadow: 0px 0px 45px 5px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 0px 45px 5px rgb(0 0 0 / 15%);
 }
 @media (orientation: landscape) and (min-height: 30em) and (min-width: 60em) {
   .videoOsdBottom-tabs {
@@ -854,7 +859,7 @@ h2.upNextDialog-nextVideoText {
 	background-color: rgb(0 0 0 / 20%)!important;
 }
 .bannerCard .paperList, .bannerCard .visualCardBox {
-	background-color: rgb(255 255 255 / 10%)!important;
+	background-color: rgb(0 0 0 / 10%)!important;
 }
 .verticalSection.section0 .itemsContainer .cardScalable.cardPadder-backdrop {
   box-shadow: 0px 10px 10px rgb(0 0 0 / 40%);
@@ -1072,8 +1077,10 @@ h2.upNextDialog-nextVideoText {
 }
 /* Background of item(s) when multi-selected */
 .item-multiselected .cardScalable.cardPadder-portrait, .item-multiselected .cardScalable.cardPadder-backdrop, .item-multiselected .cardScalable.cardPadder-square {
-  background: rgb(255 255 255 / 15%) !important;
+  background: rgb(0 0 0 / 15%) !important;
   border: 2px solid #fff;
+  transform: scale(1.025);
+  transition: all 0.1s;
 }
 .card-hoverable.focusable:hover .cardOverlayContainer {
   border: 2px solid var(--theme-primary-color);
@@ -1093,7 +1100,7 @@ h2.upNextDialog-nextVideoText {
   max-width: 85% !important;
   font-size: 12px !important;
   border: 0 !important;
-  background-color: rgb(255 255 255 / 15%) !important;
+  background-color: rgb(0 0 0 / 15%) !important;
   -webkit-box-shadow: 0px 0px 10px 0px rgb(0 0 0 / 40%) !important;
   -moz-box-shadow: 0px 0px 10px 0px rgb(0 0 0 / 40%) !important;
   box-shadow: 0px 0px 10px 0px rgb(0 0 0 / 40%) !important;
@@ -1234,7 +1241,7 @@ div.peopleSection .coveredImage {
   background-position: center;
 }
 .verticalSection.peopleSection button i.cardImageIcon.cardImageIcon-center.md-icon {
-  background-color: rgb(255 255 255 / 20%) !important;
+  background-color: rgb(0 0 0 / 20%) !important;
   padding: 30%;
   border-radius: 100%;
 }
@@ -1319,9 +1326,10 @@ div.verticalSection.similarOnLiveTVCollapsible {
 }
 div.verticalSection.itemNextUpSection, div.verticalSection.moreFromSeasonSection {
   order: 4;
-  -webkit-backdrop-filter: saturate(1.2) blur(1.5em);
-  backdrop-filter: saturate(1.2) blur(1.5em);
-  background: #ffffff15 !important;
+  -webkit-backdrop-filter: saturate(1.5) blur(3em);
+  backdrop-filter: saturate(1.5) blur(3em);
+  background: var(--docked-drawer-background);
+
   padding: 10px 30px 20px;
   border-radius: 5px;
   border-bottom: 1px solid #ffffff15;
@@ -1417,16 +1425,13 @@ div.verticalSection.itemNextUpSection, div.verticalSection.moreFromSeasonSection
   background: transparent !important;
 }
 .trackList .detailsListItem.focusable.listItem {
-  -webkit-backdrop-filter: saturate(1) blur(3em);
-  backdrop-filter: saturate(1) blur(3em);
-  background: #ffffff15 !important;
+  -webkit-backdrop-filter: saturate(1.5) blur(3em);
+  backdrop-filter: saturate(1.5) blur(3em);
+  background: rgb(15 15 15 / 35%) !important;
   padding: 5px 30px;
   border-radius: 5px;
   border-bottom: 1px solid #ffffff15;
   box-sizing: border-box;
-}
-.trackList .detailsListItem.focusable.listItem:nth-child(odd) {
-  background: #ffffff10 !important;
 }
 .chkListItemSelectContainer {
   font-size: 50% !important;
@@ -1438,6 +1443,9 @@ div.verticalSection.itemNextUpSection, div.verticalSection.moreFromSeasonSection
 }
 .listItem-border {
   border-bottom-width: 0 !important;
+}
+.listItem-hoverable:hover, .listItem-hoverable:hover .chkListItemSelectContainer {
+	background: rgb(0 0 0 / 15%) !important;
 }
 /* Selected movie/tv view - Detail view of episode */
 .detailImageContainer.detailImageContainer-main.flex.flex-direction-column.justify-content-center.itemsContainer.detailImageContainer-hidemobile.detailImageContainer-backdrop.generalItemsContainer, .detailImageContainer.detailImageContainer-main.flex.flex-direction-column.justify-content-center.itemsContainer.detailImageContainer-hidemobile.detailImageContainer-fourThree.generalItemsContainer {
@@ -1569,9 +1577,9 @@ i.cardIndicator.cardPlayedIndicator.playedIndicator.md-icon {
   margin: 0 7px 0 0;
 }
 .cardOverlayContainer.itemAction:hover {
-  background: -webkit-radial-gradient(50% 50%, farthest-corner, rgba(30, 30, 30, .5) 50%, #2c2c2c 100%) !important;
+  background: -webkit-radial-gradient(25% 25%, farthest-corner, rgba(15, 15, 15, .15) 50%, #000 100%) !important;
   background: -o-radial-gradient(50% 50%, farthest-corner, rgba(30, 30, 30, .5) 50%, #2c2c2c 100%) !important;
-  background: radial-gradient(farthest-corner at 50% 50%, rgba(30, 30, 30, .5) 50%, #2c2c2c 100%) !important;
+  background: radial-gradient(farthest-corner at 25% 25%, rgba(15, 15, 15, .15) 50%, #000 100%) !important;
 }
 .cardOverlayContainer .cardOverlayFab-primary, .cardOverlayContainer .chkCardSelectContainer {
   opacity: 0%;
@@ -1604,7 +1612,7 @@ i.cardIndicator.cardPlayedIndicator.playedIndicator.md-icon {
   right: -45px;
 }
 .chkListItemSelectContainer .checkboxLabel.chkListItemSelect-checkboxLabel:before {
-  border-color: rgb(255 255 255 / 30%) !important;
+  border-color: rgb(0 0 0 / 30%) !important;
 }
 label.chkItemSelectContainer.chkCardSelectContainer.cardOverlayButton.cardOverlayButton-hover.itemAction.emby-checkbox-label {
   padding: 10px !important;
@@ -1692,10 +1700,10 @@ i.listItemIndicator.listItemPlayedIndicator.playedIndicator.md-icon {
 }
 /* Live TV guide view */
 .epgRow .channelCellInner {
-  background-color: rgb(0 0 0 / 15%) !important;
+    background: rgb(15 15 15 / 15%) !important;
 }
 .epgRow .channelPrograms .programCellInner {
-  background: rgb(255 255 255 / 10%);
+  background: rgb(0 0 0 / 10%);
 }
 img.recordingDialog-img {
   box-shadow: 5px 5px 17px -5px rgb(0 0 0 / 50%);
