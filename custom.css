@@ -872,11 +872,14 @@ h2.upNextDialog-nextVideoText {
   -webkit-backdrop-filter: none !important;
   backdrop-filter: none !important;
 }
-.mainDrawer.focuscontainer-y.scrollY.hiddenScrollY-hover.scrollY-mini.drawer-open.drawer-docked {
-  background: rgb(0 0 0 / 25%) !important;
-}
+
+@supports ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
+ .mainDrawer.focuscontainer-y.scrollY.hiddenScrollY-hover.scrollY-mini.drawer-open.drawer-docked {
+   background: rgb(0 0 0 / 25%) !important;
+ }
+}	
 .mainDrawer.focuscontainer-y.scrollY.hiddenScrollY-hover.scrollY-mini.drawer-open {
-  background: rgb(24 29 35 / 95%) !important;
+  background: rgb(24 29 35 / 90%) !important;
 }
 @media (min-width: 40em) {
   .skinBody-withFullDrawer .page-windowScroll.withTabs, .skinBody-withFullDrawer .withTabs .padded-top-page,
@@ -935,6 +938,11 @@ h2.upNextDialog-nextVideoText {
     -webkit-backdrop-filter: saturate(1.5) blur(4em);
     backdrop-filter: saturate(1.5) blur(4em);
   }
+  @supports not ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
+   .mainDrawer.drawer-docked {
+     background-color: rgba(255, 255, 255, .8) !important !important;
+   }
+  }	
   .mainDrawer.drawer-docked:hover {
     width: 15em;
   }
@@ -995,7 +1003,7 @@ h2.upNextDialog-nextVideoText {
     box-sizing: border-box !important;
   }
   .dialog {
-    padding: 20px !important;
+    padding: 5px !important;
   }
   .dialogContentInner.padded-left.padded-right {
     padding-left: 0 !important;
