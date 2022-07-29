@@ -19,6 +19,7 @@ Improvements upon the one created by fillidill.
 * Mobile browser streaming causes videos to use "background: cover" instead of "background: fill"
 * Borders on hover does not respect the "blow-up" effect causing 1-2px image bleed through border.
 * Text colors in Settings not set.  If user is set to "light" themes may cause black text on settings.
+* Firefox does not support Background blur, notably causing issues in Info, Chapters, On Now, Guide popups.
 
 
 
