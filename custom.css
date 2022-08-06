@@ -45,8 +45,8 @@ div.mediaInfo.mediaInfoPrimary.detail-mediaInfoPrimary.flex.align-items-center.f
 
 /* Increase My Media image size */
 div.card.smallBackdropCard {
-width: 16.66% !important; 
-min-width: 200px !important;
+width: 14.28% !important; 
+min-width: 250px !important;
 }
 /* Remove Play indicator button */
 .cardOverlayFab-primary:hover {
@@ -208,6 +208,7 @@ input.searchfields-txtSearch {
 .cardOverlayButtonIcon:not([aria-label="Open in New Window"]), .listItemOverlayButtonIcon {
   background-color: var(--theme-primary-color) !important;
 }
+
 .cardOverlayFab-primary {
   width: 1.8em !important;
   height: 1.8em !important;
@@ -369,7 +370,6 @@ button.emby-scrollbuttons-scrollbutton.md-icon.paper-icon-button-light {
 .skinHeader.videoOsdHeader {
   margin-top: calc(1.2em + env(safe-area-inset-top, 0)) !important;
   padding-top: 0 !important;
-  right: unset;
 }
 .videoOsdHeader button.headerBackButton {
   margin-left: 40px !important;
@@ -1075,6 +1075,7 @@ h2.upNextDialog-nextVideoText {
   box-shadow: 0 0 10px rgb(0 0 0 / 30%);
   background-color: rgb(0 0 0 / 50%);
 }
+
 /* Background of item(s) when multi-selected */
 .item-multiselected .cardScalable.cardPadder-portrait, .item-multiselected .cardScalable.cardPadder-backdrop, .item-multiselected .cardScalable.cardPadder-square {
   background: rgb(0 0 0 / 15%) !important;
@@ -1084,6 +1085,7 @@ h2.upNextDialog-nextVideoText {
 }
 .card-hoverable.focusable:hover .cardOverlayContainer {
   border: 2px solid var(--theme-primary-color);
+  padding-bottom: 1px !important;
   border-radius: 4px;
 }
 .selectionCommandsPanel {
@@ -1172,10 +1174,12 @@ h2.upNextDialog-nextVideoText {
 .listViewUserDataButton.playstatebutton-icon {
   color: #fff !important;
 }
-.listViewUserDataButton.playstatebutton-icon:hover, .listViewUserDataButton.playstatebutton-icon:not(.playstatebutton-icon-played):hover, .listViewUserDataButton.playstatebutton-icon.playstatebutton-icon-played, .listViewUserDataButton.playstatebutton-icon {
-  color: #fff !important;
-  background: transparent !important;
-  border-color: transparent !important;
+
+.listItemOverlayButtonIcon:is([aria-label="Mark Unplayed"]),  {
+  color: var(--theme-primary-color) !important;
+}
+.listItemOverlayButtonIcon:is([aria-label="Mark Played"]), .listItemOverlayButtonIcon {
+  color: #FFF !important;
 }
 .ratingbutton-icon-withrating {
   color: var(--theme-primary-color) !important;
@@ -1593,7 +1597,6 @@ i.cardIndicator.cardPlayedIndicator.playedIndicator.md-icon {
   border-color: transparent !important;
 }
 .cardOverlayContainer.itemAction:hover .cardOverlayButton-br .cardOverlayButton[is="emby-playstatebutton"], .cardOverlayContainer.itemAction:hover .cardOverlayButton-br .cardOverlayButton[is="paper-icon-button-light"], .cardOverlayContainer.itemAction:hover .cardOverlayButton-br .cardOverlayButton[is="emby-ratingbutton"] {
-  color: #fff !important;
   background: none !important;
   border-color: none !important;
 }
@@ -1697,6 +1700,19 @@ i.listItemIndicator.listItemPlayedIndicator.playedIndicator.md-icon {
   .guideContainer {
     padding-left: 0 !important;
   }
+}
+.ui-icon-check.ui-btn-icon-notext {
+  display: block;
+  position: absolute;
+  top: -1px;
+  text-align: center;
+  vertical-align: middle;
+  width: 25px;
+  height: 20px;
+  padding-top: 3px;
+  border-radius: 50%;
+  color: #fff;
+  background: rgb(153,0,0);
 }
 /* Live TV guide view */
 .epgRow .channelCellInner {
