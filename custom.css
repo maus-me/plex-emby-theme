@@ -268,7 +268,7 @@ a:not(.emby-button), .cardText.cardTextCentered.cardText-first > button {
   background-color: var(--theme-primary-color) !important;
 }
 .tabs-viewmenubar-slider {
-  background: transparent !important;
+  background: rgb(0 0 0 / 15%) !important;
   -webkit-backdrop-filter: none !important;
   backdrop-filter: none !important;
 }
@@ -276,7 +276,7 @@ a:not(.emby-button), .cardText.cardTextCentered.cardText-first > button {
   font-size: 12px;
 }
 .headerMiddle.sectionTabs.headerMiddle-withSectionTabs .emby-tab-button-active {
-  background: rgb(0 0 0 / 10%) !important;
+  background: rgb(0 0 0 / 25%) !important;
 }
 
 /* Arrow left right horizontal content scrolling */
@@ -571,13 +571,14 @@ button.emby-scrollbuttons-scrollbutton.md-icon.paper-icon-button-light {
   }
   .videoOsdVolumeControls-showhover > .videoOsdVolumeSliderWrapper {
     background: rgba(56, 56, 56, .76) !important;
-    -webkit-backdrop-filter: blur(4em) saturate(1.8) !important;
-    backdrop-filter: blur(4em) saturate(1.8) !important;
+    -webkit-backdrop-filter: blur(4em) saturate(1.5) !important;
+    backdrop-filter: blur(4em) saturate(1.5) !important;
     -webkit-box-shadow: 0px 0px 50px 0px rgb(0 0 0 / 90%) !important;
     -moz-box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 0.9) !important;
     box-shadow: 0px 0px 50px 0px rgb(0 0 0 / 90%) !important;
   }
 }
+
 .videoOsdBottom-tabs {
   position: fixed;
   top: 0;
@@ -858,10 +859,6 @@ h2.upNextDialog-nextVideoText {
   border-radius: 3px;
   margin: 2px;
 }
-.skinHeader-withBackground {
-  -webkit-backdrop-filter: none !important;
-  backdrop-filter: none !important;
-}
 
 @supports ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
  .mainDrawer.focuscontainer-y.scrollY.hiddenScrollY-hover.scrollY-mini.drawer-open.drawer-docked {
@@ -890,9 +887,12 @@ h2.upNextDialog-nextVideoText {
 .skinHeader-withfulldrawer {
   padding: 1em 1em 1em 1em !important;
   margin: 0 auto;
+}
+.headroom-scrolling {
   background: #00000010 !important;
   border-bottom: 0.08em solid rgba(0, 0, 0, .04);
 }
+
 @media (min-width: 50em) {
   .skinHeader-withfulldrawer {
     padding: 1em 5em 1em 10em !important;
@@ -1729,7 +1729,7 @@ img.recordingDialog-img {
 		height: calc(3.125em + 2 * max(1.2em,env(safe-area-inset-top,0))) !important;
 	}
 }
-@media not all and (min-width:40em)
+@media not all and (min-width:80em)
 {
 	.headerTop-withSectionTabs:not(.skinHeader-tv){
 		height: calc(6.71em + 2 * max(1.2em,env(safe-area-inset-top,0))) !important;
