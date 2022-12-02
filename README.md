@@ -1,4 +1,5 @@
-# plex-emby-theme
+# plex-emby-theme-2.5
+## See https://github.com/nullip/plex-emby-theme-2.6 for updated script.
 Improvements upon the one created by fillidill.
 
 ## Features over fillidill version
